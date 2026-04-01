@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ゾンビランドサガ聖地巡礼ツアー</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+
+            /* キラキラ水色背景 */
+            background: linear-gradient(135deg, #a6e3ff, #6ccfff, #cceeff);
+            background-size: 400% 400%;
+            animation: bgMove 10s ease infinite;
+        }
+
+        /* 背景ゆらゆらアニメーション */
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .book {
+            width: 800px;
+            margin: 60px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 140, 255, 0.5);
+            border: 5px solid #66ccff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            color: #0066cc;
+            text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(0, 120, 255, 0.4);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #3399ff;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            color: #0066cc;
+            background: linear-gradient(to right, #e6f7ff, #ffffff);
+            padding: 15px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 140, 255, 0.3);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            transform: scale(1.05);
+            background: #d0ecff;
+        }
+
+        /* 下部ボタンエリア（左右配置） */
+        .bottom-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        /* 共通ボタン */
+        .bottom-button {
+            text-decoration: none;
+            background: linear-gradient(to right, #66ccff, #0066cc);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 120, 255, 0.4);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .bottom-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #0066cc, #66ccff);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+
+        <h1>ゾンビランドサガLIVE<br>フランシュシュ ゆめぎんがフェスティバル</h1>
+        <h2>目次</h2>
+
+        <ul>
+            <li><a href="page1.html">① ぴあアリーナMM</a></li>
+            <li><a href="page2.html">② みそきん</a></li>
+
+        </ul>
+
+        <div class="bottom-area">
+            <a href="schedule.html" class="bottom-button">予定表</a>
+            <a href="map.html" class="bottom-button">座席表</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
