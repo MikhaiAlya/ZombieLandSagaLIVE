@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ★ 追加：スマホ用 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>② 杉ノ原展望台</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+
+            background: linear-gradient(135deg, #a6e3ff, #6ccfff, #cceeff);
+            background-size: 400% 400%;
+            animation: bgMove 10s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .book {
+            width: 800px;
+            margin: 60px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 140, 255, 0.5);
+            border: 5px solid #66ccff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            color: #0066cc;
+            text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(0, 120, 255, 0.4);
+            margin-bottom: 30px;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .text-area {
+            width: 55%;
+            font-size: 16px;
+            line-height: 1.8;
+            word-break: break-word;
+        }
+
+        .image-area {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .image-area img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .text-area a {
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .back-area {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            text-decoration: none;
+            background: linear-gradient(to right, #66ccff, #0066cc);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 120, 255, 0.4);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #ff1493, #ff66b2);
+        }
+
+        /* ★ スマホ用レイアウト */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .text-area,
+            .image-area {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+
+        <h1>② みそきん</h1>
+
+        <div class="content">
+            <!-- 左：説明文 -->
+            <div class="text-area">
+                <p>
+                    これはみそきんです。<br>
+                    ヒカキンが作ったラーメンです。
+                </p>
+
+                <p>
+                    美味しいんかな？？
+                </p>
+
+                <p>
+                    ▶ みそきん公式サイト：
+                    <a href="hhttps://misokin.jp/?srsltid=AfmBOopG6u4EcHwPqQRJYGJxNA_59nRUWXHHJzWqkoWlv5JWmwxedLkm" target="_blank">
+                        みそきん
+                    </a>
+                </p>
+            </div>
+
+            <!-- 右：画像 -->
+            <div class="image-area">
+                <img src="misokin.jpeg" alt="杉ノ原展望台">
+            </div>
+        </div>
+
+        <div class="back-area">
+            <a href="index.html" class="back-button">目次へ戻る</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

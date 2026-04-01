@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ゾンビランドサガLIVE 予定表</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+
+            background: linear-gradient(135deg, #a6e3ff, #6ccfff, #cceeff);
+            background-size: 400% 400%;
+            animation: bgMove 10s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .book {
+            width: 800px;
+            margin: 60px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 140, 255, 0.5);
+            border: 5px solid #66ccff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            color: #0066cc;
+            text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(0, 120, 255, 0.4);
+            margin-bottom: 30px;
+        }
+
+        details {
+            margin-bottom: 20px;
+            border: 2px solid #cceeff;
+            border-radius: 15px;
+            background: #f5fbff;
+            padding: 10px 15px;
+        }
+
+        summary {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0066cc;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #d9f2ff;
+        }
+
+        .schedule-table th {
+            width: 120px;
+            color: #0066cc;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .schedule-table tr:hover {
+            background: #e6f7ff;
+        }
+
+        /* 今の予定 */
+        .current {
+            background: #3399ff !important;
+            color: white;
+            font-weight: bold;
+        }
+
+        .back-area {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .back-button {
+            text-decoration: none;
+            background: linear-gradient(to right, #66ccff, #0066cc);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 120, 255, 0.4);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #0066cc, #66ccff);
+        }
+
+        .detail-btn {
+            float: right;
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 15px;
+            background: #66ccff;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .detail-btn:hover {
+            background: #3399ff;
+        }
+
+        /* モーダル背景 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* モーダル中身 */
+        .modal-content {
+            background: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 400px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 20px;
+            border: none;
+            background: #0066cc;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book">
+
+        <h1>ゾンビランドサガLIVE<br>フランシュシュ ゆめぎんがフェスティバル</h1>
+
+        <details>
+            <summary>4月3日</summary>
+            <table class="schedule-table">
+                <tr>
+                    <th>16:00</th>
+                    <td>仕事終了予定</td>
+                </tr>
+                <tr>
+                    <th>17:15</th>
+                    <td>帰宅</td>
+                </tr>
+                <tr>
+                    <th>19:15</th>
+                    <td>準備して家を出発<br></td>
+                </tr>
+                <tr>
+                    <th>20:50</th>
+                    <td>夜行バス集合時間<br>サンアンドムーン802号<br>（難波OCAT 2Fバスターミナル 1番、2番、3番、9番、10番ゲート前）
+                        <button class="detail-btn" data-detail="難波OCATの2階バスターミナル集合です。<br>
+    <a href='https://www.ocat.co.jp/' target='_blank'>
+    OCAT公式サイトはこちら
+    </a><br>
+    出発10分前には到着しておくのがおすすめ。">
+                            詳細
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>21:00</th>
+                    <td>バスターミナル出発</td>
+                </tr>
+
+            </table>
+        </details>
+
+        <details>
+            <summary>4月4日</summary>
+            <table class="schedule-table">
+                <tr>
+                    <th>5:55</th>
+                    <td>新横浜駅 到着</td>
+                </tr>
+                <tr>
+                    <th>6:15-6:41</th>
+                    <td>新横浜駅-ぴあアリーナMM
+                        <button class="detail-btn" data-detail="新横浜駅-高島町駅<br>
+                                 ブルーライン   湘南台行 1番線  6:15-6:28">
+                            詳細
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>6:41-8:30</th>
+                    <td>マクドナルド ランドマークプラザ店</td>
+                </tr>
+                <tr>
+                    <th>8:30-10:00</th>
+                    <td>ぴあアリーナMM並び</td>
+                </tr>
+                <tr>
+                    <th>14:30まで</th>
+                    <td>この辺りをブラブラ</td>
+                </tr>
+                <tr>
+                    <th>15:00-18:00</th>
+                    <td>🌈ゾンビランドサガLIVE🌈</td>
+                </tr>
+                <tr>
+                    <th>18:17-19:02</th>
+                    <td>ぴあアリーナMMから東横INN大森 移動</td>
+                </tr>
+                <tr>
+                    <th>19:02-</th>
+                    <td>余韻に浸りながら夜ご飯&就寝</td>
+                </tr>
+
+            </table>
+        </details>
+
+        <details>
+            <summary>4月5日</summary>
+            <table class="schedule-table">
+                <tr>
+                    <th>9:00-10:00</th>
+                    <td>起床 朝食など</td>
+                </tr>
+                <tr>
+                    <th>10:00-10:46</th>
+                    <td>東横INN大森-東京タワー</td>
+                </tr>
+                <tr>
+                    <th>10:46-12:00</th>
+                    <td>東京タワー観光</td>
+                </tr>
+                <tr>
+                    <th>12:04-12:37</th>
+                    <td>東京タワー-東京スカイツリー</td>
+                </tr>
+                <tr>
+                    <th>12:37-14:00</th>
+                    <td>東京スカイツリー観光</td>
+                </tr>
+                <tr>
+                    <th>14:01-14:23</th>
+                    <td>東京スカイツリー-東横INN東京駅新大橋前</td>
+                </tr>
+                <tr>
+                    <th>15:00</th>
+                    <td>ホテルチェックイン</td>
+                </tr>
+                <tr>
+                    <th>15:00-17:15</th>
+                    <td>秋葉原アニメイトなど</td>
+                </tr>
+                <tr>
+                    <th>17:21-17:42</th>
+                    <td>秋葉原駅-池袋駅</td>
+                </tr>
+                <tr>
+                    <th>18:00-18:30</th>
+                    <td>みそきん
+                        <button class="detail-btn" data-detail="以下からチケットの詳細を確認できます。<br>
+    <a href='https://livepocket.jp/mytickets' target='_blank'>
+    みそきんチケットURL
+    </a><br>
+    出発10分前には到着しておくのがおすすめ。">
+                            詳細
+                        </button>
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <th>18:30-19:00</th>
+                    <td>東横INN東京駅新大橋前に帰宅</td>
+                </tr>
+                <tr>
+                    <th>19:00-</th>
+                    <td>ぶらぶらして就寝</td>
+                </tr>
+
+            </table>
+        </details>
+        <details>
+            <summary>4月6日</summary>
+            <table class="schedule-table">
+                <tr>
+                    <th>9:00-10:00</th>
+                    <td>起床 朝食など</td>
+                </tr>
+                <tr>
+                    <th>10:00-10:46</th>
+                    <td>東横INN東京駅新大橋前-浅草</td>
+                </tr>
+                <tr>
+                    <th>10:46-12:00</th>
+                    <td>浅草観光</td>
+                </tr>
+                <tr>
+                    <th>12:03-12:34</th>
+                    <td>浅草-秋葉原</td>
+                </tr>
+                <tr>
+                    <th>12:34-14:30</th>
+                    <td>秋葉原をぶらぶら</td>
+                </tr>
+                <tr>
+                    <th>14:30-14:40</th>
+                    <td>秋葉原駅-有楽町駅</td>
+                </tr>
+                <tr>
+                    <th>15:00-16:30</th>
+                    <td>🌈ゾンビランドサガEXPO🌈</td>
+                </tr>
+                <tr>
+                    <th>16:30-17:00</th>
+                    <td>ゾンビランドサガEXPO-東京駅</td>
+                </tr>
+                <tr>
+                    <th>17:00-18:00</th>
+                    <td>お土産など</td>
+                </tr>
+                <tr>
+                    <th>18:39-21:06</th>
+                    <td>東京駅-新大阪駅</td>
+                </tr>
+
+
+            </table>
+        </details>
+
+        <div class="back-area">
+            <a href="index.html" class="back-button">目次へ戻る</a>
+        </div>
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const now = new Date();
+                const nowMonth = now.getMonth() + 1;
+                const nowDay = now.getDate();
+
+                const detailsList = document.querySelectorAll("details");
+
+                detailsList.forEach(detail => {
+
+                    const summaryText = detail.querySelector("summary").textContent;
+
+                    const match = summaryText.match(/(\d+)月(\d+)日/);
+                    if (!match) return;
+
+                    const month = parseInt(match[1]);
+                    const day = parseInt(match[2]);
+
+                    if (month === nowMonth && day === nowDay) {
+                        detail.open = true;
+                    }
+
+                });
+
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const buttons = document.querySelectorAll(".detail-btn");
+                const modal = document.getElementById("modal");
+                const modalText = document.getElementById("modal-text");
+                const closeBtn = document.querySelector(".close-btn");
+
+                buttons.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        modalText.innerHTML = btn.dataset.detail;
+                        modal.style.display = "block";
+                    });
+                });
+
+                closeBtn.addEventListener("click", () => {
+                    modal.style.display = "none";
+                });
+
+                // 背景クリックで閉じる
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+
+            });
+        </script>
+
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-text"></div>
+            <button class="close-btn">閉じる</button>
+        </div>
+    </div>
+</body>
+
+</html>
