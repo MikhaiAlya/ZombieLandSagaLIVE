@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ゾンビランドサガ聖地巡礼ツアー 佐賀マップ</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+    background: #3399ff;
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* 白い枠 */
+.book {
+    width: 1100px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+    border: 5px solid #3399ff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px;
+    color: #3399ff;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 8px rgba(255,105,180,0.5);
+    margin-bottom: 20px;
+}
+
+/* 画像を横並び（PC用） */
+.map-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 画像 */
+.map-image {
+    width: 48%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255,105,180,0.4);
+}
+
+/* 戻るボタン */
+.back-button {
+    text-decoration: none;
+    background: #3399ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255,105,180,0.4);
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    background: #3399ff;
+}
+
+/* 📱 スマホ対応 */
+@media (max-width: 600px) {
+    .book {
+        width: auto;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .map-container {
+        flex-direction: column; /* 横 → 縦 */
+    }
+
+    .map-image {
+        width: 100%; /* 1枚ずつフル幅 */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="book">
+
+    <h1>佐賀マップ</h1>
+
+    <div class="map-container">
+        <img src="piaseat.jpg" alt="佐賀県マップ1" class="map-image">
+    </div>
+
+    <div>
+        <a href="index.html" class="back-button">目次へ戻る</a>
+    </div>
+
+</div>
+</body>
+</html>
